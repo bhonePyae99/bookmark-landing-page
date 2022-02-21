@@ -12,7 +12,9 @@ const NavBar = () => {
         <li>
           <a href="#pricing">prices</a>
         </li>
-        <li>contact</li>
+        <li>
+          <a href="#contact">contact</a>
+        </li>
         <li className="bg-softRed rounded-md text-white px-8 py-2 shadow">
           login
         </li>

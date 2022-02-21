@@ -44,7 +44,7 @@ const Tabs = () => {
               onClick={() => {
                 setCurrentSelected(item.id);
               }}
-              key={item.heading}
+              key={item.id + "a"}
             >
               <p
                 className={
@@ -66,12 +66,9 @@ const Tabs = () => {
         </div>
       </div>
       {tabs.map((item) => (
-        <>
+        <div key={item.id}>
           {currentSelected === item.id && (
-            <div
-              className="grid md:grid-cols-2 md:mt-10 mt-36 gap-20"
-              key={item.id}
-            >
+            <div className="grid md:grid-cols-2 md:mt-10 mt-36 gap-20">
               <div className="col-span-1 relative">
                 <div className="bg-softBlue md:absolute left-0 translate-y-1/4 -translate-x-1/2 md:ml-0 w-[150%] h-44 md:h-full rounded-r-full">
                   <img
@@ -92,7 +89,7 @@ const Tabs = () => {
               </div>
             </div>
           )}
-        </>
+        </div>
       ))}
     </div>
   );
